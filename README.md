@@ -4,7 +4,7 @@ A working professional reference of notable cyber incidents for study, compariso
 
 > **Use note:** Cyber incidents are often reconstructed from incomplete evidence. Attribution, initial-access details, victim counts, and loss estimates may change as investigations mature. Treat disputed claims and estimated losses accordingly.
 
-> **Source standard:** Prefer official advisories, court records, regulatory filings, victim disclosures, and original technical research. Documentaries, books, and journalism are useful for context but should not be the sole basis for technical or attribution claims.
+> **Source standard:** Primary: official advisories, court records, regulatory filings, victim disclosures, and original technical research. Secondary: Documentaries, books, and journalism for context.
 
 ## Field Guide
 
@@ -1779,4 +1779,3 @@ Copy this section when adding a new incident.
   - **Additional Context:**
 ```
 
----
