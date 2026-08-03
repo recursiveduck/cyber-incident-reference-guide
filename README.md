@@ -70,8 +70,6 @@ A working professional reference of notable cyber incidents for study, compariso
 | 38 | [TrickBot / Wizard Spider](#38-trickbot--wizard-spider) | 2016–2022 | Malware ecosystem | Credential theft and ransomware enablement |
 | 39 | [Hot Topic Credential-Stuffing Breach](#39-hot-topic-credential-stuffing-breach) | 2024 | Credential stuffing | Large-scale account-data exposure |
 | 40 | [Casio Legacy and Ransomware Incidents](#40-casio-legacy-and-ransomware-incidents) | 2023–2024 | Misconfiguration / Ransomware | Repeated data and operational compromise |
-| # | Event | Year | Type | Primary Impact |
-|---:|---|---:|---|---|
 | 41 | [Fortitude Master-Copy Theft at Netflix](#41-fortitude-master-copy-theft-at-netflix) | 2026 | Physical theft / Removable-media exposure | Loss of control over unreleased intellectual property |
 | 42 | [Minnesota Community Water-System Cyberattacks](#42-minnesota-community-water-system-cyberattacks) | 2026 | OT / Critical-infrastructure disruption | Disruption of municipal water-system controls |
 
