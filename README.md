@@ -70,6 +70,10 @@ A working professional reference of notable cyber incidents for study, compariso
 | 38 | [TrickBot / Wizard Spider](#38-trickbot--wizard-spider) | 2016–2022 | Malware ecosystem | Credential theft and ransomware enablement |
 | 39 | [Hot Topic Credential-Stuffing Breach](#39-hot-topic-credential-stuffing-breach) | 2024 | Credential stuffing | Large-scale account-data exposure |
 | 40 | [Casio Legacy and Ransomware Incidents](#40-casio-legacy-and-ransomware-incidents) | 2023–2024 | Misconfiguration / Ransomware | Repeated data and operational compromise |
+| # | Event | Year | Type | Primary Impact |
+|---:|---|---:|---|---|
+| 41 | [Fortitude Master-Copy Theft at Netflix](#41-fortitude-master-copy-theft-at-netflix) | 2026 | Physical theft / Removable-media exposure | Loss of control over unreleased intellectual property |
+| 42 | [Minnesota Community Water-System Cyberattacks](#42-minnesota-community-water-system-cyberattacks) | 2026 | OT / Critical-infrastructure disruption | Disruption of municipal water-system controls |
 
 ---
 
@@ -1745,6 +1749,99 @@ A working professional reference of notable cyber incidents for study, compariso
   - **Technical Analysis:** [CISA — Ransomware Guide](https://www.cisa.gov/stopransomware/ransomware-guide)
 
 ---
+
+## 41. Fortitude Master-Copy Theft at Netflix
+
+- **Date / Period:** June 2026 theft; lawsuit filed July 29, 2026
+- **Target / Sector:** Netflix offices and the producers of *Fortitude*; media, entertainment, and intellectual property
+- **Vector and Vulnerability:** The producers allege that an unencrypted hard drive containing a master-quality copy of the unreleased film was hand-delivered to Netflix for acquisition review and was later stolen with other drives from office desks. This was primarily a physical-security and removable-media handling incident rather than a network intrusion.
+- **Attribution:** The thief or thieves have not been publicly identified. The underlying civil dispute remains unresolved. Netflix disputes that it bears the risk of loss and says the film was delivered without proper industry-standard safeguards.
+- **Tools / Tactics Used:**
+  - Physical theft of portable storage
+  - Unauthorized possession of unencrypted media
+  - Potential piracy or unauthorized distribution risk
+  - Exploitation of weak chain-of-custody and storage practices
+- **Interesting Takeaway / Distinctive Feature:** The stolen hardware was comparatively inexpensive, but the information stored on it represented a film reportedly produced for more than $45 million. The incident shows that the value of an information asset is independent of the value of its storage device.
+- **Human Factors:**
+  - A master copy was transported on portable media
+  - The delivered copy was reportedly unencrypted
+  - High-value media was allegedly stored on or near ordinary office desks
+  - Responsibility for custody and security was disputed between the content owner and prospective distributor
+  - Business convenience appears to have displaced formal chain-of-custody controls
+- **Security Principle Reinforced:**
+  - Encryption at rest
+  - Removable-media governance
+  - Physical security
+  - Chain of custody
+  - Data loss prevention
+  - Third-party information-sharing agreements
+  - Digital watermarking and forensic tracing
+- **Primary Failure Mode:** Physical-security, media-handling, and third-party governance failure
+- **Estimated Loss / Impact:** The producers seek at least **$105 million** in damages and allege that the risk of piracy damaged the film’s commercial and distribution value. No public evidence establishes that the film has been leaked, that the claimed value has actually been lost, or that the lawsuit’s allegations have been proven.
+- **Lessons Learned:**
+  1. A digital asset does not stop being a cybersecurity responsibility when it is placed on physical media.
+  2. Master-quality intellectual property should be encrypted, uniquely watermarked, inventoried, and transferred through a documented chain of custody.
+  3. Receiving organizations need secure intake, storage, return, and destruction procedures for third-party media.
+  4. Contracts should clearly allocate custody, security obligations, incident reporting, insurance, and risk of loss before sensitive material is transferred.
+  5. Incident impact may arise from loss of confidentiality and control even when backup copies remain available.
+- **Control Mapping:**
+  - **NIST CSF:** GV.SC, ID.AM, PR.AA, PR.DS, PR.PS, DE.CM, RS.CO
+  - **CIS Controls:** 1, 3, 5, 6, 8, 10, 15
+  - **Cybersecurity Concepts:** Encryption at rest, removable media, chain of custody, intellectual-property protection, third-party risk, data loss prevention
+- **Sources:**
+  - **Primary / Legal Context:** Civil complaint filed by the producers should be added when a stable court-record link becomes available.
+  - **Additional Context:** [Reuters — Producer sues Netflix for $105 million over missing Nicolas Cage movie](https://www.reuters.com/legal/litigation/producer-sues-netflix-105-million-over-missing-nicolas-cage-movie-2026-07-30/)
+  - **Additional Context:** [The Guardian — Netflix sued for $105m over stolen Nicolas Cage war thriller](https://www.theguardian.com/film/2026/jul/30/netflix-sued-nicolas-cage-war-thriller)
+
+---
+
+## 42. Minnesota Community Water-System Cyberattacks
+
+- **Date / Period:** July 26–27, 2026
+- **Target / Sector:** More than 30 community water systems in Minnesota; municipal water and wastewater critical infrastructure
+- **Vector and Vulnerability:** Public reporting indicates that attackers targeted technology used to remotely monitor or control water-system equipment. Detailed initial-access methods and affected product information had not been fully disclosed as of August 3, 2026. Internet exposure, remote-access weaknesses, shared technology, credentials, or common configurations remain important investigative questions rather than established facts for every victim.
+- **Attribution:** The FBI, Minnesota authorities, and federal agencies were investigating. Iranian involvement was publicly suspected, but no conclusive attribution had been announced. Reporting also noted the possibility of actors using Iranian identities as a false flag.
+- **Tools / Tactics Used:**
+  - Coordinated targeting of multiple municipal systems
+  - Interference with remote monitoring or control technology
+  - Password and configuration changes reported across the broader campaign
+  - Disruption of automated operating controls
+  - Possible targeting of internet-accessible operational technology
+- **Interesting Takeaway / Distinctive Feature:** A campaign using relatively accessible remote-control pathways reportedly reached dozens of small public utilities in roughly 48 hours. The physical consequences were limited partly because stored water, local personnel, resets, and manual intervention provided resilience.
+- **Human Factors:**
+  - Small utilities often operate with limited cybersecurity staffing and budgets
+  - Operational convenience can encourage direct or weakly protected remote access
+  - Legacy equipment may remain in service because replacement is costly and disruptive
+  - Communities may depend on vendors or shared technology without full visibility into exposure
+  - Manual operating knowledge can erode when automation works reliably for long periods
+- **Security Principle Reinforced:**
+  - IT/OT segmentation
+  - Secure remote access and MFA
+  - Removal of unnecessary internet exposure
+  - OT asset inventory
+  - Configuration and credential management
+  - Manual fallback capability
+  - Incident coordination and information sharing
+  - Critical-infrastructure resilience
+- **Primary Failure Mode:** OT exposure and remote-access governance failure, with investigation still ongoing
+- **Estimated Loss / Impact:** More than 30 systems were targeted. Braham’s well and water-treatment operating controls were briefly shut down, leaving the city reliant on water stored in its tower until operations were restored. Some communities requested temporary water conservation. Authorities reported no confirmed contamination or major sustained public-health consequence.
+- **Lessons Learned:**
+  1. A compromise does not need to contaminate water to create a serious public-safety and continuity risk.
+  2. Internet-accessible PLCs, HMIs, telemetry systems, and vendor remote-access paths require explicit justification and strong protection.
+  3. Utilities should maintain tested manual controls, local operating knowledge, stored-water contingencies, and out-of-band communications.
+  4. Common vendors, configurations, and remote-management platforms can create correlated risk across otherwise separate municipalities.
+  5. OT response plans must prioritize safe physical operation, not merely restoration of network connectivity.
+  6. Attribution should remain provisional until technical and government evidence supports a stronger conclusion.
+- **Control Mapping:**
+  - **NIST CSF:** GV.SC, ID.AM, ID.RA, PR.AA, PR.IR, PR.PS, DE.CM, RS.MI, RC.RP
+  - **CIS Controls:** 1, 4, 5, 6, 8, 12, 13, 15, 17
+  - **Cybersecurity Concepts:** Operational technology, SCADA/ICS security, critical infrastructure, remote access, segmentation, manual fallback, resilience, false-flag attribution
+- **Sources:**
+  - **Official / Primary:** Add Minnesota IT Services, CISA, FBI, or WaterISAC advisories when stable public incident notices become available.
+  - **Additional Context:** [Reuters — Minnesota IT officials disclose coordinated cyberattack on more than 30 local water systems](https://www.reuters.com/legal/litigation/minnesota-it-officials-disclose-coordinated-cyberattack-more-than-30-local-water-2026-07-28/)
+  - **Additional Context:** [Associated Press — Cyberattacks on Minnesota water systems investigated](https://apnews.com/article/5bb1dcbaab8e3231889700c38a21e8ea)
+  - **Additional Context:** [Reuters — U.S. cyber defense agency warns hackers are increasingly targeting water systems](https://www.reuters.com/world/us-cyber-defense-agency-warns-increased-hacker-targeting-water-utilities-2026-07-30/)
+
 
 ## Blank Entry Template
 
